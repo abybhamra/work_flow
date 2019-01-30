@@ -1,7 +1,5 @@
-from celery import Celery
+from celery_client import app
 
-app = Celery('tasks')
-app.config_from_object('celeryconfig')
 
 @app.task
 def add(x, y):
